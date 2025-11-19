@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Manrope", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: hsl(210, 46%, 95%);
+}
+
+main{
+    width: 90%;
+    height: 500px;
+    margin: 100px auto 200px auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 5px 10px rgba(158, 175, 194, 0.2);
+}
+
+.img-container{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.img-container img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.text-container{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    padding: 35px 30px 20px 30px;
+}
+
+#title{
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 15px;
+    line-height: 1.5em;
+}
+
+#para-1{
+    font-size: 13.3px;
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.inner-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 30px 20px 30px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 10px 10px;
+}
+
+.inner-container #person-1{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 45px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#name{
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+#dob{
+    font-size: 13px;
+    color: hsl(212, 23%, 69%);
+}
+
+.share-btn-1 {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.share-btn-1 #share {
+  width: 14px;
+  height: 14px;
+  transition: 0.3s ease;
+}
+    
+.second-container{
+    position: relative;
+}
+
+.pop-up{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(217, 19%, 35%);
+    padding: 21.5px 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+}
+
+.share-btn-2 {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: hsl(214, 17%, 51%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.share-btn-2 #share {
+    filter: brightness(0) invert(1);
+    width: 14px;
+    height: 14px;
+    transition: 0.3s ease;
+}
+
+.pop-up p{
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(212, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+
+
+.active-state{
+    display: none;
+}
+
+
+
+footer{
+    padding: 50px;
+}
+
+
+
+@media (min-width:700px){
+    main{
+        margin-top: 200px;
+        margin-bottom: 100px;
+        width: clamp(350px ,90%, 750px);
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+    }
+
+    .img-container{
+        width: 40%;
+        background: url(./images/drawers.jpg) no-repeat center/cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .img-container img{
+        width: 0;
+    }
+
+    .second-container{
+        width: 60%;
+    }
+
+    .text-container{
+        width: 100%;
+        padding: 30px 45px 10px 45px;
+        border-radius: 0 10px 10px 0;
+    }
+
+    #title{
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    #para-1{
+        font-size: 13px;
+        line-height: 1.5em;
+    }
+
+    .inner-container{
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .pop-up{
+        width: 60%;
+        bottom: 30%;
+        left: 53%;
+        border-radius: 10px;
+        padding-left: 45px;
+        padding-right: 45px;
+        box-shadow: 0 5px 10px rgba(158, 175, 194, 0.2);
+    }
+
+    .pop-up::before{
+        content: '';
+        position: absolute;
+        border-top: 15px solid hsl(217, 19%, 35%);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        top: 100%;
+        left: 50%;
+    }
+
+    .share-btn-2{
+        display: none;
+    }
+}
